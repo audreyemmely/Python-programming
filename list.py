@@ -44,3 +44,54 @@ print(list1)
 
 list2.reverse()
 print(list2)
+
+#list comprehension
+x = [1, 2, 3, 4, 5]
+y = [i**2 for i in x]
+z = [i for i in x if i%2==1]
+
+print("Usando list comprehension")
+print(x)
+print(y)
+print(z)
+
+#enumerate
+list3 = ["audrey", "muito", "bonita"]
+
+for i, name in enumerate(list3):
+    print(i, name)
+
+#filter
+def evenNumbers(i):
+    if i%2 == 0:
+        return i
+
+list4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+evenList = filter(evenNumbers, list4)
+print(list(evenList))
+
+#map
+def double_func(x):
+    return x*2
+
+value = [2, 3, 4, 5, 6]
+double_value = map(double_func, value)
+print(list(double_value))
+
+#reduce
+from functools import reduce
+
+def sum(x, y):
+    return x+y
+
+list5 = [1, 3, 5, 10, 20]
+
+sum = reduce(sum, list5)
+print(sum)
+
+#zip
+my_list4 = [1, 2, 3, 4, 5]
+my_list5 = ["audrey", "você", "é", "muito", "legal"]
+
+for number, name in zip(my_list4, my_list5):
+    print(number, name)
