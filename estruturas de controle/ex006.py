@@ -12,11 +12,11 @@ anonasc = int(input('Qual o ano de nascimento do atleta?\n'))
 idade = date.today().year - anonasc
 if idade <= 9:
     print('MIRIM')
-elif idade > 9 and idade <= 14:
+elif idade <= 14:
     print('INFANTIL')
-elif idade > 14 and idade <= 19:
+elif idade <= 19:
     print('JÚNIOR')
-elif idade > 19 and idade <= 25:
+elif idade <= 25:
     print('SÊNIOR')
 else:
     print('MASTER')        
